@@ -7,25 +7,39 @@
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-  <div class="box">
+<body onload="setup();">
+  
+  <div id="box" class="box">
     <div class="title">
       <p>Welcome to Windows</p>
       <button>X</button>
       <button>?</button>
     </div>
-    <div class="body" onload="setup();">
+    <div class="body" >
       <div id="leftside">
         <p>Type a user name and password to log on to Windows.</p>
         <div id="dialogs">
-          <label><u>U</u>ser name:</label><input value="Lawnmower Man">
-          <label><u>P</u>assword:</label><input>
+          <label><u>U</u>ser name:</label><input id="user" value="Lawnmower Man">
+          <label><u>P</u>assword:</label><input id="pass">
         </div>
       </div>
       <div id="buttons">
+        <button onclick="okay()">Okay</button>
+        <button>Cancel</button>
       </div>
     </div>
   </div>
+  
+  <div id="yes">
+    <img src="granted.jpg">
+
+  </div>
+  <div id="no">
+    <img src="denied.jpg">
+
+  </div>
+
+  
   <script src="script.js"></script>
 </body>
 </html>
